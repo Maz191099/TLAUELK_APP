@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 // Adiciones 
 import {HttpClientModule} from '@angular/common/http';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     // Adiciones
     HttpClientModule,
+    PipesModule,
   ],
   providers: [
     StatusBar,
