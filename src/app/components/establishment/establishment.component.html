@@ -1,10 +1,17 @@
-  <ion-card class="post">
-    <img [src]="establishment.image" alt="">
-    <ion-card-header>
-      <ion-card-title><h3 style="color:black; font-style: normal;">{{ establishment.name }}</h3></ion-card-title>
-      <ion-card-subtitle>{{ establishment.direction }}</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <h5 style="color:black;">{{ establishment.schedule }}</h5>
-    </ion-card-content>
-  </ion-card>
+<ion-card class="post">
+  <img [src]="establishment.image" alt="" class="image">
+  <ion-card-header>
+    <ion-card-title><h3 style="color:black; font-style: normal;">{{ establishment.name }}</h3></ion-card-title>
+    <ion-card-subtitle>{{ establishment.direction }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <h5 style="color:black;">{{ establishment.schedule }}</h5>
+     
+    <ion-toolbar>
+      <ion-button color="secondary" shape="round" size="small" slot="end" (click)="mostrarDetalle( establishment.id )">
+        Ver más<ion-icon  name="add-outline" ></ion-icon>
+      </ion-button> 
+    </ion-toolbar>
+  </ion-card-content>
+  
+</ion-card>

@@ -13,4 +13,10 @@ export class EstablishmentService {
   getEstablishment(){
       return this.http.get(`${URL}establishment/`);
   }
+  getEstablishmentByID(ID){
+    return this.http.get(`${URL}establishment/${ID}/`);
+  }
+  getProductByID(ID){
+    return this.http.get(`${URL}producto/${ID}/elements/`);
+  }
 }
