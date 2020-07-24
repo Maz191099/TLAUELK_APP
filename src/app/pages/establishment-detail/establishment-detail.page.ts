@@ -17,7 +17,7 @@ export class EstablishmentDetailPage implements OnInit {
   mostrarComentarios: boolean = true;
   productos: Producto [] = [];
   comentarios: Commentary [] = [];
-
+  
   actCommentary: boolean = false;
   actProduct: boolean = false;
   @Input() establishment: Establishment = {};
@@ -60,7 +60,6 @@ export class EstablishmentDetailPage implements OnInit {
   activateCommentary(){
     this.actCommentary = !this.actCommentary;
   }
-
   activateProduct(){
     this.actProduct = !this.actProduct;
   }

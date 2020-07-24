@@ -1,0 +1,18 @@
+<ion-item class="item">
+  <ion-row>
+    <ion-col size="12">
+        <h3>{{commentary.name}} </h3>
+        <p  style="text-align: justify;">
+          <strong style="font-size: 16px;">Puntuación: </strong>
+          <strong  *ngIf="commentary.score <= 30 && commentary.score >= 0" style="font-size: 16px; color: red;" >{{commentary.score}} </strong>
+          <strong  *ngIf="commentary.score >= 31 && commentary.score <= 69" style="font-size: 16px; color: orange;" >{{commentary.score}} </strong>
+          <strong  *ngIf="commentary.score >= 70 && commentary.score <= 100 " style="font-size: 16px; color: green;" >{{commentary.score}} </strong>
+        </p>
+    </ion-col>
+    <ion-col size="12" no-padding >
+      <p color="medium" style="text-align: justify;">
+        {{commentary.content}}
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-item>

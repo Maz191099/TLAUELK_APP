@@ -28,19 +28,19 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col size="12" size-lg="8"  size-xs="12"> 
-  <div *ngIf="mostrarProductos">
-    <ion-toolbar *ngIf="activateCommentary" style="font-size: 25px; color: #000;">
-      <strong slot="start" >Productos</strong>
-        <ion-icon slot="end" *ngIf="!actProduct" name="add-circle-sharp"  (click)="activateProduct()"  color="dark" ></ion-icon>
-        <ion-icon  slot="end" *ngIf="actProduct" name="remove-circle-sharp" (click)="activateProduct()" color="dark" ></ion-icon>
-    </ion-toolbar>
-  </div>
+  <ion-col size="12" size-lg="8"  size-xs="12"> 
+    <div *ngIf="mostrarProductos" class="commentary-list">
+      <ion-toolbar *ngIf="activateCommentary" style="font-size: 25px; " color="dark">
+        <strong slot="start" class="ion-padding-start ion-padding-end">Productos</strong>
+          <ion-icon slot="end" *ngIf="!actProduct" name="add-circle-sharp"  (click)="activateProduct()"  color="light" class="ion-padding-start ion-padding-end"></ion-icon>
+          <ion-icon  slot="end" *ngIf="actProduct" name="remove-circle-sharp" (click)="activateProduct()" color="light" class="ion-padding-start ion-padding-end"></ion-icon>
+      </ion-toolbar>
+    </div>
   <ion-row *ngIf="actProduct">
     <ion-col 
-              size="12" size-lg="4" sixe-md="6" size-sm="6" size-xs="12" 
-              *ngFor="let producto of productos" >
-      <ion-card class="post" >
+              size="12" size-lg="4"  size-xs="12" 
+              *ngFor="let producto of productos" class="commentary-list">
+      <ion-card class="item" >
         
         <img [src]="'http://127.0.0.1:8000' + producto.image" alt="" class="image">
         <ion-card-header>
@@ -57,47 +57,17 @@
     </ion-col>
   </ion-row>
 </ion-col>
-  <ion-col size="12" size-lg="4"  size-xs="12">
-  <div *ngIf="mostrarComentarios">
-    <ion-toolbar *ngIf="activateCommentary" style="font-size: 25px; color: #000;">
-      <strong slot="start" >Comentarios</strong>
-        <ion-icon slot="end" *ngIf="!actCommentary" name="add-circle-sharp"  (click)="activateCommentary()"  color="dark" ></ion-icon>
-        <ion-icon  slot="end" *ngIf="actCommentary" name="remove-circle-sharp" (click)="activateCommentary()" color="dark" ></ion-icon>
+  <ion-col size="12" size-lg="4"  size-xs="12" class="commentary-list" >
+  <div *ngIf="mostrarComentarios" class="commentary-list">
+    <ion-toolbar *ngIf="activateCommentary" style="font-size: 25px; " color="dark">
+      <strong slot="start" class="ion-padding-start ion-padding-end">Comentarios</strong>
+        <ion-icon slot="end" *ngIf="!actCommentary" name="add-circle-sharp"  (click)="activateCommentary()"  color="light" class="ion-padding-start ion-padding-end"></ion-icon>
+        <ion-icon  slot="end" *ngIf="actCommentary" name="remove-circle-sharp" (click)="activateCommentary()" color="light" class="ion-padding-start ion-padding-end"></ion-icon>
     </ion-toolbar>
   </div>
-<div *ngIf="actCommentary">
-  <ion-list *ngFor="let comentario of comentarios">
-    <div >
-      <ion-toolbar>
-        <strong slot="start" style="font-size: 20px; color: #000;">{{comentario.name}}</strong>
-        <ion-badge  
-          class="ion-padding-start ion-padding-end"
-          style="font-size: 16px;"
-          *ngIf="comentario.score <= 30 && comentario.score >= 0"
-          color="danger" 
-          slot="end">
-          {{comentario.score}}
-        </ion-badge>
-        <ion-badge  
-          class="ion-padding-start ion-padding-end"
-          *ngIf="comentario.score >= 31 && comentario.score <= 69"
-          color="warning" 
-          slot="end">
-          {{comentario.score}}
-        </ion-badge>
-        <ion-badge 
-          class="ion-padding-start ion-padding-end" 
-          *ngIf="comentario.score >= 70 && comentario.score <= 100 "
-          color="success" 
-          slot="end">
-          {{comentario.score}}
-        </ion-badge>
-      </ion-toolbar>
-      <p style="text-align: justify;">
-        {{comentario.content}}
-      </p>
-      
-    </div>
+<div *ngIf="actCommentary" class="commentary-list">
+  <ion-list *ngFor="let comentario of comentarios" inset="true"  class="commentary-list">
+    <app-commentary [commentary]="comentario"></app-commentary>
   </ion-list>
 </div>
 </ion-col>
