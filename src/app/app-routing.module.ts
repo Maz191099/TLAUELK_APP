@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'establishment-detail/:id',
     loadChildren: () => import('./pages/establishment-detail/establishment-detail.module').then( m => m.EstablishmentDetailPageModule)
   },
+  {
+    path: 'commentary/:id',
+    loadChildren: () => import('./pages/commentary/commentary.module').then( m => m.CommentaryPageModule)
+  },
 ];
 
 @NgModule({

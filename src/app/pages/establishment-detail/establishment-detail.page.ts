@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { EstablishmentService } from 'src/app/services/establishment.service';
 import { Establishment, Producto, Commentary } from '../../interfaces/interfaces';
 
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-establishment-detail',
   templateUrl: './establishment-detail.page.html',
@@ -15,10 +17,14 @@ export class EstablishmentDetailPage implements OnInit {
   mostrarComentarios: boolean = true;
   productos: Producto [] = [];
   comentarios: Commentary [] = [];
+
+  actCommentary: boolean = false;
+  actProduct: boolean = false;
   @Input() establishment: Establishment = {};
   constructor(
               private activatedRoute: ActivatedRoute,
               private establishmentServices: EstablishmentService,
+              private navCtrl: NavController, 
               ) { }
 
   ngOnInit() {
@@ -43,18 +49,23 @@ export class EstablishmentDetailPage implements OnInit {
       for (let i = 0; i <= longitud-1; i++) {
         this.comentarios.push(resp[i]);
       }
-      console.log(this.comentarios);
     });
-
     // Optener establecimiento por id
     this.establishmentServices.getEstablishmentByID(this.id).subscribe(resp=>{
       this.establishment = resp;
     });
-
-    
   }
 
-  
-  
+  // ocultar/mostrar
+  activateCommentary(){
+    this.actCommentary = !this.actCommentary;
+  }
+
+  activateProduct(){
+    this.actProduct = !this.actProduct;
+  }
+  mostrarDetalle( ID ) {
+    this.navCtrl.navigateRoot(['/commentary', ID], {animated: true});
+  }
 
 }

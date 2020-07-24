@@ -1,0 +1,45 @@
+<ion-header no-border>
+  <ion-toolbar color="danger">
+    
+    <ion-title>
+      Nuevo Comentario
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="crearCommentary()"
+                  [disabled]="comentario.name.length < 1"
+                  >
+        Compartir
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input  [(ngModel)]="comentario.name"></ion-input>
+    </ion-item>    
+    <ion-item>
+      <ion-label position="floating">Comentario</ion-label>
+      <ion-textarea  [(ngModel)]="comentario.content" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-text position="floating">Puntuación</ion-text>
+      <ion-range min="0" max="100" color="secondary" pin="true" [(ngModel)]="comentario.score" >
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">100</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+  <br>
+  <div class="ion-text-center">
+    <ion-button slot="center" (click)="mostrarDetalle()"   shape="round" color="danger">
+      Cancelar
+    </ion-button>
+  </div>
+    
+    
+</ion-content>

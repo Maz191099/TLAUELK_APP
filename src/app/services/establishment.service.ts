@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Establishments } from '../interfaces/interfaces';
+import { Establishments, Commentary } from '../interfaces/interfaces';
 const URL = environment.url;
 @Injectable({
   providedIn: 'root'
@@ -22,4 +22,13 @@ export class EstablishmentService {
   getCommentaryByID(ID){
     return this.http.get(`${URL}commentary/${ID}/elements/`);
   }
+  postCommentary(commentary){
+    return new Promise( resolve => {
+      this.http.post(`${URL}commentary/`, commentary) 
+        .subscribe( resp =>{
+        resolve(true);
+        });
+    });
+  }
+
 }
