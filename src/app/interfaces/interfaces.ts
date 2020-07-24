@@ -33,3 +33,8 @@ export interface Commentary {
   score?: number;
   id_establecimiento?: number;
 }
+
+export interface Slide {
+  id?: number;
+  image?: string;
+}
