@@ -19,4 +19,7 @@ export class EstablishmentService {
   getProductByID(ID){
     return this.http.get(`${URL}producto/${ID}/elements/`);
   }
+  getCommentaryByID(ID){
+    return this.http.get(`${URL}commentary/${ID}/elements/`);
+  }
 }
