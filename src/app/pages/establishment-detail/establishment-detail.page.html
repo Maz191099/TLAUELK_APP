@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="danger">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="home"></ion-back-button>
+      <ion-back-button defaultHref="tabs/home"></ion-back-button>
     </ion-buttons>
     <ion-title>{{establishment.name}}</ion-title>    
   </ion-toolbar>
@@ -41,20 +41,18 @@
       </ion-toolbar>
     </div>
   <ion-row *ngIf="actProduct">
-    <ion-col 
-              size="12" size-lg="4"  size-xs="12" 
-              *ngFor="let producto of productos" class="commentary-list">
-      <ion-card class="item" (click)="mostrarProducto( producto.id )"  >
-        
+    <ion-col    size="12" size-lg="3" (click)="mostrarProducto( producto.id )"   sixe-md="4" size-sm="6" size-xs="12" *ngFor="let producto of productos">
+      <ion-card class="post">
         <img [src]="'http://127.0.0.1:8000' + producto.image" alt="" class="image">
         <ion-card-header>
-          <ion-card-title><h3 style="color:black; font-style: normal;">{{ producto.name }}</h3></ion-card-title>
+          <ion-card-title><h3 style="color:black; font-style: normal;"><center> 
+            <ion-toolbar>
+              <ion-title>{{ producto.name }}</ion-title>
+            </ion-toolbar>
+        </center></h3></ion-card-title>
+          <center><ion-card-subtitle> <strong style="color:black;">Precio: $</strong>{{ producto.precio }}</ion-card-subtitle></center>
         </ion-card-header>
-        <ion-card-content>
-          <p >
-            <!--<strong style="color:black; font-style: normal;">Descripción: </strong><ion-text color="dark" >{{producto.description}}</ion-text> <br><br>-->
-            <strong style="color:black; font-style: normal;">Precio: $</strong> <ion-text color="dark">{{producto.precio}}</ion-text>
-          </p>
+        <ion-card-content> 
         </ion-card-content>
         
       </ion-card>

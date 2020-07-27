@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar color="danger">
+    <img src="/assets/icon.png" slot="start" alt="" style="width: 80px;" >
+      <ion-searchbar  type="tel" mode="md"  placeholder="Buscar..." 
+              animete
+              (ionChange)="buscar($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- Baner -->
+  <br>
+  <center>
+    <ion-chip color="danger">
+     <ion-icon name="fast-food-outline"></ion-icon>
+     <ion-label>Comida</ion-label>
+   </ion-chip>
+   </center>
+   <!-- Lista de productos -->
+   <ion-grid fixed > 
+    <ion-row>
+        <ion-col    size="12" size-lg="3" sixe-md="4" size-sm="6" size-xs="12" *ngFor="let producto of productos | filtro2: textoBuscar ">
+          <ion-card class="post" (click)="mostrarProducto( producto.id )">
+            <img [src]="producto.image" alt="" class="image">
+            <ion-card-header>
+              <ion-card-title><h3 style="color:black; font-style: normal;"><center> 
+                <ion-toolbar>
+                  <ion-title>{{ producto.name }}</ion-title>
+                </ion-toolbar>
+            </center></h3></ion-card-title>
+              <center><ion-card-subtitle> <strong style="color:black;">Precio: $</strong>{{ producto.precio }}</ion-card-subtitle></center>
+            </ion-card-header>
+            <ion-card-content> 
+            </ion-card-content>
+            
+          </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

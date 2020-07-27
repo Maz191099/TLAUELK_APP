@@ -5,11 +5,11 @@ import { Producto, Establishment } from '../../interfaces/interfaces';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.page.html',
-  styleUrls: ['./product-detail.page.scss'],
+  selector: 'app-detalle-producto',
+  templateUrl: './detalle-producto.page.html',
+  styleUrls: ['./detalle-producto.page.scss'],
 })
-export class ProductDetailPage implements OnInit {
+export class DetalleProductoPage implements OnInit {
   id = null;
   producto: Producto = {};
   establishment: Establishment = {};
@@ -29,8 +29,9 @@ export class ProductDetailPage implements OnInit {
     
   }
 
-  mostrarEstablecimiento( ID ) {
-    this.navCtrl.navigateRoot(['/establishment-detail', ID], {animated: true});
+  
+  mostrarProducto() {
+    this.navCtrl.navigateRoot(['/tabs/productos'], {animated: true});
   }
-
-}
+  
+  }

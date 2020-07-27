@@ -41,4 +41,7 @@ export class EstablishmentService {
   getProductID(ID){
     return this.http.get(`${URL}producto/${ID}/`);
   }
+  getProducts(){
+    return this.http.get(`${URL}producto/`);
+  }
 }

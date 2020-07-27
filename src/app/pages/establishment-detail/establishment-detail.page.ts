@@ -40,7 +40,7 @@ export class EstablishmentDetailPage implements OnInit {
       }
     });
 
-    // Optener productos
+    // Optener comentarios
     this.establishmentServices.getCommentaryByID(this.id).subscribe(resp=>{
       let longitud = Object.keys(resp).length
       if (longitud <1){
@@ -70,5 +70,5 @@ export class EstablishmentDetailPage implements OnInit {
   mostrarProducto( ID ) {
     this.navCtrl.navigateRoot(['/product-detail', ID], {animated: true});
   }
-
+  
 }

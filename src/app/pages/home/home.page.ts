@@ -26,7 +26,6 @@ export class HomePage implements OnInit{
                     for (let i = 0; i <= longitud; i++) {
                       this.slides.push(resp[i]);
                     }
-                    console.log(this.slides);
                   });
   }
   
