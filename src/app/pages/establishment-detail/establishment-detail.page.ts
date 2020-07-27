@@ -67,4 +67,8 @@ export class EstablishmentDetailPage implements OnInit {
     this.navCtrl.navigateRoot(['/commentary', ID], {animated: true});
   }
 
+  mostrarProducto( ID ) {
+    this.navCtrl.navigateRoot(['/product-detail', ID], {animated: true});
+  }
+
 }

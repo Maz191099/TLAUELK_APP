@@ -37,6 +37,8 @@ export class EstablishmentService {
   //Optener imagenes para el slide
   getSlide(){
     return this.http.get(`${URL}gallery/`);
-}
-
+  }
+  getProductID(ID){
+    return this.http.get(`${URL}producto/${ID}/`);
+  }
 }

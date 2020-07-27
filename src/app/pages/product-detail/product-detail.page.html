@@ -1,9 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>product_detail</ion-title>
+  <ion-toolbar color="danger">
+      <ion-icon style="font-size: 25px; " class="ion-padding-start" (click)="mostrarEstablecimiento( producto.id_establishment )" slot="start" name="arrow-back-outline"></ion-icon>
+
+    <ion-title>{{producto.name}}</ion-title>    
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <ion-row>
+    <ion-col size="12" size-lg="4"  size-xs="12">
+      <img [src]="producto.image" alt="" >
+    </ion-col>
+    <ion-col size="12" size-lg="8"  size-xs="12">
+      <p style="text-align: justify;">
+        {{producto.description}}
+      </p>
+      <p>
+        <strong>Precio: $</strong><ion-text color="dark">{{producto.precio}}</ion-text> <br><br>
+        <strong>Establecimiento: </strong> <ion-text color="dark">{{producto.id_establishment}}</ion-text>
+      </p>
+    </ion-col>
+  </ion-row>
 </ion-content>
