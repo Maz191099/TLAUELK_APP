@@ -1,5 +1,7 @@
 {
   "name": "TLAUELK",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
