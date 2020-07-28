@@ -2,18 +2,26 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'tabs/home',
-    pathMatch: 'full'
-  },
+  //{
+    //path: 'home',
+    //loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  //},
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  //{
+    //path: 'productos',
+    //loadChildren: () => import('./pages/productos/productos.module').then( m => m.ProductosPageModule)
+  //},
+  //{
+    //path: '',
+    //redirectTo: 'tabs',
+    //pathMatch: 'full'
+  //},
+  {
+    path: '',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
     path: 'establishment-detail/:id',
@@ -26,14 +34,6 @@ const routes: Routes = [
   {
     path: 'product-detail/:id',
     loadChildren: () => import('./pages/product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
-  },
-  {
-    path: 'tabs',
-    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
-  },
-  {
-    path: 'productos',
-    loadChildren: () => import('./pages/productos/productos.module').then( m => m.ProductosPageModule)
   },
   {
     path: 'detalle-producto/:id',
