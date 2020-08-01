@@ -7,27 +7,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content >
-  <ion-row>
-    <ion-col size="12" size-lg="4" sixe-md="4" size-sm="12" size-xs="12" ></ion-col>
-    <ion-col size="12" size-lg="4" sixe-md="4" size-sm="12" size-xs="12" >
-      <ion-slides  pager="true" >
-        <ion-slide *ngFor="let slide of slides " class="slide-full">
-          <ion-card style="background-image: 'slide.image';">
-            <img [src]="slide.image" alt="" class="slide-image">
-          </ion-card>
-        </ion-slide>
-      </ion-slides>
-    </ion-col>
-    <ion-col size="12" size-lg="4" sixe-md="4" size-sm="12" size-xs="12" ></ion-col>
-  </ion-row>
-
+  <br>
 <center>
-  
- <ion-chip color="danger">
-  <ion-icon name="restaurant-outline"></ion-icon>
-  <ion-label>Establecimientos</ion-label>
-</ion-chip>
-
+  <ion-chip color="danger">
+    <ion-icon name="restaurant-outline"></ion-icon>
+    <ion-label>Establecimientos</ion-label>
+  </ion-chip>
 </center>
   <!--Establishments -->
   <app-establishments [establishments]="establishment | filtro: textoBuscar"> </app-establishments>

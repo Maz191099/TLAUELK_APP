@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar color="danger">
+    <img src="/assets/icon.png" slot="start" alt="" style="width: 80px;" >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" size-lg="2" sixe-md="2" size-sm="12" size-xs="12" ></ion-col>
+    <ion-col size="12" size-lg="8" sixe-md="8" size-sm="12" size-xs="12" >
+      <ion-slides  pager="ios" [options]="slideOpts">
+        <ion-slide *ngFor="let slide of slides ">
+          <!--<div [style.background-image]="'url( ' + slide.image + ' )'" class="image-container"></div>-->
+          <img [src]="slide.image"  class="image-conteiner">
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+    <ion-col size="12" size-lg="2" sixe-md="2" size-sm="12" size-xs="12" ></ion-col>
+  </ion-row>
+  <br>
+  <center>  
+    <ion-chip color="danger">
+      <ion-icon name="star-half-outline"></ion-icon>
+      <ion-label>Promociones</ion-label>
+    </ion-chip>
+  </center>
+  <ion-grid fixed>
+    <ion-row >
+      <ion-col  *ngFor="let img of promotions"
+               size="12" size-lg="4" sixe-md="4" size-sm="12" size-xs="12"
+               (click)="onViewImage(img)">
+        <img src="{{img.image}}" class="galeria">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  
+  
+</ion-content>

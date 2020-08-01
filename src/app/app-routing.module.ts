@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'detalle-producto/:id',
     loadChildren: () => import('./pages/detalle-producto/detalle-producto.module').then( m => m.DetalleProductoPageModule)
   },
+  {
+    path: 'image-model',
+    loadChildren: () => import('./pages/image-model/image-model.module').then( m => m.ImageModelPageModule)
+  }
 ];
 
 @NgModule({

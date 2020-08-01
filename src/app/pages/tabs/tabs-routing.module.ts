@@ -25,8 +25,17 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'gallery',
+        children:[
+          {
+            path: '',
+            loadChildren: () => import('../gallery/gallery.module').then(m=>m.GalleryPageModule)
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/tabs/home',
+        redirectTo: '/tabs/gallery',
         pathMatch: 'full'
       }
       
@@ -34,7 +43,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo: '/tabs/home',
+    redirectTo: '/tabs/gallery',
     pathMatch: 'full'
   }
 ];

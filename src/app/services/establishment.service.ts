@@ -44,4 +44,7 @@ export class EstablishmentService {
   getProducts(){
     return this.http.get(`${URL}producto/`);
   }
+  getPromotions(){
+    return this.http.get(`${URL}promotions/`);
+  }
 }

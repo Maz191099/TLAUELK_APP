@@ -38,3 +38,9 @@ export interface Slide {
   id?: number;
   image?: string;
 }
+
+export interface Promotion {
+  id: number;
+  image: string;
+  description: string;
+}

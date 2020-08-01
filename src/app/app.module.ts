@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Adiciones 
 import {HttpClientModule} from '@angular/common/http';
 import { PipesModule } from './pipes/pipes.module';
+import { ImageModelPageModule } from './pages/image-model/image-model.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { PipesModule } from './pipes/pipes.module';
     // Adiciones
     HttpClientModule,
     PipesModule,
+    ImageModelPageModule,
   ],
   providers: [
     StatusBar,

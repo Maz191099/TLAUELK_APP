@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EstablishmentService } from 'src/app/services/establishment.service';
 import { Establishment, Slide } from '../../interfaces/interfaces';
 import { range } from 'rxjs';
-
+ 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
