@@ -42,7 +42,7 @@ export class CommentaryPage implements OnInit {
       return
     } else{
       const creado = await this.establishmentServices.postCommentary( this.comentario);
-    this.route.navigateByUrl('home');
+    this.route.navigateByUrl('tabs/home');
     }
   }
   mostrarDetalle( ) {
