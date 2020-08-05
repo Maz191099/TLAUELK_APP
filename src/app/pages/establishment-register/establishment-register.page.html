@@ -1,0 +1,71 @@
+<ion-content class="mainSlide" padding>
+  <center>
+    <br>
+  <form (ngSubmit)="register(fRegister)" #fRegister="ngForm" >
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <img src="/assets/icon.png"  alt="" style="width: 140px;" >
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2><strong>Registrar establecimiento</strong></h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          
+            <ion-list>
+              
+              <ion-item>
+                <ion-label>Nombre</ion-label>
+                <ion-input name="name"
+                            type="text"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Seleccionar imagen</ion-label>
+                <ion-button expand="full"
+                            color="danger"
+                            shape="round">
+                  <ion-icon slot="start" name="images"></ion-icon>
+                  Galería
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-label>Dirección</ion-label>
+                <ion-input name="direction"
+                            type="text"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Descripción</ion-label>
+                <ion-input name="description"
+                            type="text"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Horario</ion-label>
+                <ion-input name="schedule"
+                            type="text"
+                            required></ion-input>
+              </ion-item>
+            </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit"
+                      color="warning"
+                      shape="round">
+                      Registrar 
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+</center>
+</ion-content>

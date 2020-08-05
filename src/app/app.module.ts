@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { PipesModule } from './pipes/pipes.module';
 import { ImageModelPageModule } from './pages/image-model/image-model.module';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,8 @@ import { ImageModelPageModule } from './pages/image-model/image-model.module';
     HttpClientModule,
     PipesModule,
     ImageModelPageModule,
+    IonicStorageModule.forRoot(),
+    
   ],
   providers: [
     StatusBar,

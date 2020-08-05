@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { from } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Storage } from '@ionic/storage';
 const URL = environment.url;
 
 @Injectable({

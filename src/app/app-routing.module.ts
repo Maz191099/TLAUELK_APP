@@ -22,6 +22,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+    //loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'establishment-detail/:id',
@@ -42,7 +43,12 @@ const routes: Routes = [
   {
     path: 'image-model',
     loadChildren: () => import('./pages/image-model/image-model.module').then( m => m.ImageModelPageModule)
+  },
+  {
+    path: 'establishment-register',
+    loadChildren: () => import('./pages/establishment-register/establishment-register.module').then( m => m.EstablishmentRegisterPageModule)
   }
+
 ];
 
 @NgModule({
