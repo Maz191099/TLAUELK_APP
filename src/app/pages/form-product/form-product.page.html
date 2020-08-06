@@ -1,0 +1,68 @@
+<ion-header >
+  <ion-toolbar color="tertiary">
+    <ion-title>Agregar producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancelar()">
+        Cancelar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="mainSlide" padding>
+  <center>
+    <br>
+  <form (ngSubmit)="register(fRegister)" #fRegister="ngForm" >
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          
+            <ion-list>
+              
+              <ion-item>
+                <ion-label>Nombre</ion-label>
+                <ion-input name="name"
+                            type="text"
+                            [(ngModel)]="product.name"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Seleccionar imagen</ion-label>
+                <ion-button expand="full"
+                            color="tertiary"
+                            shape="round">
+                  <ion-icon slot="start" name="images"></ion-icon>
+                  Galería
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-label>Descripción</ion-label>
+                <ion-input name="description"
+                            type="text"
+                            [(ngModel)]="product.description"
+                            required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Precio</ion-label>
+                <ion-input name="price"
+                            type="number"
+                            [(ngModel)]="product.precio"
+                            required></ion-input>
+              </ion-item>
+            </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit"
+                      color="warning"
+                      shape="round">
+                      Registrar 
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+</center>
+</ion-content>

@@ -47,7 +47,15 @@ const routes: Routes = [
   {
     path: 'establishment-register',
     loadChildren: () => import('./pages/establishment-register/establishment-register.module').then( m => m.EstablishmentRegisterPageModule)
+  },  {
+    path: 'home-establishment',
+    loadChildren: () => import('./pages/home-establishment/home-establishment.module').then( m => m.HomeEstablishmentPageModule)
+  },
+  {
+    path: 'form-product',
+    loadChildren: () => import('./pages/form-product/form-product.module').then( m => m.FormProductPageModule)
   }
+
 
 ];
 

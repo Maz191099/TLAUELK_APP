@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-toolbar class="new-background-color" color="tertiary">
+    <ion-title><strong>{{local.name}}</strong> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-row>
+    <ion-col size="12"  size-sm="5" size-xs="12" >
+      <img [src]="local.image" alt="">
+    </ion-col>
+    <ion-col size="12"  size-sm="7" size-xs="12" >
+      <p style="text-align: justify;"><strong>Descripción: </strong>{{local.description}}</p>
+      <p style="text-align: justify;"><strong>Dirección: </strong>{{local.direction}}</p>
+      <p style="text-align: justify;"><strong>Horario: </strong>{{local.schedule}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <center><ion-toolbar>
+        
+        <ion-button  expand="block"  slot="start" shape="round" color="warning">
+          <ion-icon name="create"></ion-icon>
+          Editar info. 
+        </ion-button>
+        <ion-button  expand="block"  slot="end" shape="round"  color="tertiary" (click)="addProduct( )">
+          <ion-icon name="add-circle"></ion-icon>
+          Producto 
+        </ion-button>
+        
+      </ion-toolbar></center>
+    </ion-col>
+    
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <h2><strong>Productos registrados</strong></h2>
+    </ion-col>
+  </ion-row>
+</ion-content>

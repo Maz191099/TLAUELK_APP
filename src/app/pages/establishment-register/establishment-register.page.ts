@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides, NavController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
-
+ 
 @Component({
   selector: 'app-establishment-register',
   templateUrl: './establishment-register.page.html',
@@ -20,7 +20,7 @@ export class EstablishmentRegisterPage implements OnInit {
   ngOnInit() {
   }
   register(fRegister: NgForm){
-    console.log(fRegister.valid);
-    this.navCtrl.navigateRoot(['/tabs/gallery'], {animated: true});
+    console.log('Se Registra el producto ');
+    this.navCtrl.navigateRoot(['/home-establishment'], {animated: true}); 
   }
-}
+} 
