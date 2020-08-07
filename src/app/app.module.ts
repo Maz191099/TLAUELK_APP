@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { PipesModule } from './pipes/pipes.module';
 import { ImageModelPageModule } from './pages/image-model/image-model.module';
 import { IonicStorageModule } from '@ionic/storage';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { IonicStorageModule } from '@ionic/storage';
     PipesModule,
     ImageModelPageModule,
     IonicStorageModule.forRoot(),
+    ComponentsModule
     
   ],
   providers: [

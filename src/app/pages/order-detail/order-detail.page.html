@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/order"></ion-back-button>
+    </ion-buttons>
+    <ion-title><strong>Reservación</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <center>
+    <img src="/assets/icon.png"  alt="" style="width: 140px;" >
+    <p>
+      <strong>Establecimiento: </strong><br>{{reservacion.esta}} <br><br>
+      <strong>Fecha: </strong><br>{{reservacion.fecha}} <br><br>
+      <strong>Estatus: </strong><br>{{reservacion.status}}
+    </p>  
+    <ion-button  fill="clear" shape="round" color="danger">
+      Cancelar
+    </ion-button>
+  </center>
+</ion-content>
